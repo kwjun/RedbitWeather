@@ -4,11 +4,10 @@ var geocoder;
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
 } 
-//Get the current latitude and the longitude;
+//Get the current weather on success
 function successFunction(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
-	
 	setWeather(lat, lng);
 }
 
@@ -35,7 +34,7 @@ function getByCity(city) {
       }
     });
 }
-
+//Get weather information from http://www.wunderground.com/ based on longitude and latitude
 function setWeather(lat, lnt){
 	$.ajax({
 			url : "http://api.wunderground.com/api/75ab98a81f0e3f15/geolookup/conditions/q/"+ lat +"," +lnt+".json",
