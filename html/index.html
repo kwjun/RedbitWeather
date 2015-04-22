@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RedBit Weather</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="_js/weather.js"></script>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="_css/main.css" >
+	<link rel="stylesheet" href="_css/font-awesome.css">
+	<script>
+		$(document).ready(function(){
+			<!-- attach event handler to text input -->
+		  $("#txt-address").keydown(function(e){
+			  if(e.keyCode == 13 && this.value){
+				<!-- request the longitude and latitude based on keyinput
+				getByCity(this.value);
+				$.ajax({
+				  url : "http://api.wunderground.com/api/75ab98a81f0e3f15/geolookup/conditions/q/"+$("#hidn_lat").val()+ "," + $("#hidn_lng").val() + ".json",
+				  dataType : "jsonp",
+				  success : function(parsed_json) {
+				  var location = parsed_json['location']['city'];
+				  var temp_c = parsed_json['current_observation']['temp_c'];
+				  var icon_url = parsed_json['current_observation']['icon_url'];
+				  var weather = parsed_json['current_observation']['weather'];
+				  var feelslike_c = parsed_json['current_observation']['feelslike_c'];
+				  $(".location").html(location);
+				  $(".temp-c").html(temp_c);
+				  $(".weather-icon").attr("src", icon_url);
+				  $(".weather").html(weather);
+				  $(".feelslike-c").html(feelslike_c);
+				  }
+				});
+			  }
+		  });
+		});
+	</script>
+</head> 
+<body onload="initialize()">
+	
+	<div class="overlay">
+		<nav class="navbar" role="navigation">
+		<div class="container">
+            <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="/_img/logo2.png">
+            </a>
+			<!--
+			<a class="menu-btn" href="index.html">
+				<span class="fa fa-bars"></span>
+			</a>
+			-->
+			<div class="nav-input">
+				<span class="fa fa-search"></span>
+				<input type="text" id="txt-address" placeholder="City, Postal Code, Address"/>
+			</div>
+        </div>
+        <!-- /.container -->
+	</nav>
+	<div class="weather-condition">
+		<img alt="weather_icon" class="weather-icon" src="/_img/error.png"/>
+		<span class="location"></span>
+		<span class="weather"></span>
+		<p><span class="temp weather-space">Temperature:</span><span class="temp-c"></span><span class="temp-unit"> &degC </span>
+		<p><span class="temp weather-space">Feels Like:</span><span class="feelslike-c"></span><span class="temp-unit"> &degC </span>
+	</div>
+	</div>
+</body> 
+</html>

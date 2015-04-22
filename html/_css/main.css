@@ -1,0 +1,99 @@
+body{
+	background: url(../_img/bg_sunny.jpg) no-repeat center;	
+	padding: 0;
+	margin: 0;
+	color: white;
+	min-width: 720px;
+}
+
+.overlay{
+	background: rgba(0, 0, 0, 0.4); 
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+	background: rgba(255, 255, 255, 0.3); 
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+.nav-input{
+	width:20px;
+	margin-right: 10px;
+}
+.nav-input:hover{
+	width:250px;
+}
+
+.nav-input input[type=text] {
+	float: right;
+	border: 0; 
+    -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    border-radius: 4px; 
+	height: 40px;
+	display: none;
+	width: 80%;
+
+}
+
+.nav-input:hover input[type=text]{
+	display: inline-block;
+}
+
+.logo{
+	height: 68px;
+	vertical-align:middle;
+}
+
+.navbar-product{
+	color: #EB1C2C;
+	font-size: 20px;
+	position: absolute;
+	line-height: 100%;
+	float: left;
+}
+.nav-input{
+	font-size: 30px;
+	float: right;
+	height: 40px;
+	margin: 5px 10px;
+}
+
+.menu-btn{
+	height: 40px;
+	font-size: 30px;
+	width: 40px;
+	color: black;
+	position: fixed;
+}	
+
+.weather-icon{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	top: -60px;
+	right: -60px;
+	float: right;
+}
+
+.weather-condition{
+	background: rgba(255, 255, 255, 0.6);
+	font-size: 20px;
+	padding: 20px;
+	width: 250px;
+	margin: 10% auto;
+	line-height: 200%;
+}
+
+.location{
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.weather-space{
+	margin-right: 10px;
+}
