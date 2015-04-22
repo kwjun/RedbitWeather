@@ -5,5 +5,5 @@
 * jQuery
 
 ###Description
-* When the page is loaed, it gets weather information based on your current geolocation() using google's API
+* When the page is loaed, it gets weather information based on your current geolocation(longitude latitude) using google's API
 * To enter city (or any keyword like postal code), hover mouse pointer over the magnefying glass icon.
